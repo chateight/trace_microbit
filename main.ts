@@ -31,7 +31,7 @@ let pb = 200
 basic.forever(function () {
     rv = pins.analogReadPin(AnalogPin.P0)
     lv = pins.analogReadPin(AnalogPin.P2)
-    pow = Math.abs(rv - lv) / (rv + lv) * P
+    pow = Math.constrain(Math.abs(rv - lv) / (rv + lv) * P, 0.6, 2)
     if (Math.abs(rv - lv) < th) {
         basic.showNumber(0)
         fwd()
