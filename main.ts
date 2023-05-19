@@ -1,8 +1,8 @@
 function fwd () {
     pins.digitalWritePin(DigitalPin.P13, 1)
     pins.digitalWritePin(DigitalPin.P15, 1)
-    pins.analogWritePin(AnalogPin.P14, 160)
-    pins.analogWritePin(AnalogPin.P16, 150)
+    pins.analogWritePin(AnalogPin.P14, 140)
+    pins.analogWritePin(AnalogPin.P16, 130)
 }
 function tr (pow: number) {
     pins.digitalWritePin(DigitalPin.P13, 1)
@@ -20,8 +20,8 @@ let lv = 0
 let rv = 0
 let pow = 0
 let th = 100
-let P = 6
-let pb = 250
+let P = 4
+let pb = 130
 basic.forever(function () {
     rv = pins.analogReadPin(AnalogPin.P0)
     lv = pins.analogReadPin(AnalogPin.P2)
@@ -35,4 +35,5 @@ basic.forever(function () {
             tl(pow)
         }
     }
+    basic.pause(20)
 })
