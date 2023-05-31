@@ -3,9 +3,10 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
         "microphone": "*",
-        "pxt-kitronik-motor-driver": "github:kitronikltd/pxt-kitronik-motor-driver#v0.0.8"
+        "pxt-kitronik-motor-driver": "github:kitronikltd/pxt-kitronik-motor-driver#v0.0.8",
+        "microbit-pxt-blehid": "github:bsiever/microbit-pxt-blehid#v0.0.24",
+        "datalogger": "*"
     },
     "files": [
         "main.blocks",
