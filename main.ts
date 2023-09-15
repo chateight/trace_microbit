@@ -10,6 +10,9 @@ function tr (pow: number) {
     pins.analogWritePin(AnalogPin.P14, 0)
     pins.analogWritePin(AnalogPin.P16, pow)
 }
+input.onButtonPressed(Button.A, function () {
+    datalogger.deleteLog(datalogger.DeleteType.Fast)
+})
 function log () {
     datalogger.log(
     datalogger.createCV("pow", pow),
